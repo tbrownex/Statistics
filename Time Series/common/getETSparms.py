@@ -4,10 +4,10 @@ def getETSparms():
     for the ETS "model" and the "fit"
     '''
     mParms   = []
-    trend    = [None]
-    damped   = [False]
-    seasonal = [None]
-    seasonalPeriods = [99]
+    trend    = ["add"]
+    damped   = [True]
+    seasonal = ["add"]
+    seasonalPeriods = [12]
         
     for t in trend:
         for d in damped:
@@ -21,14 +21,14 @@ def getETSparms():
                     mParms.append(x)
                     
     fParms   = list()
-    BoxCox = [True]
+    BoxCox = [False]
     bias   = [False]
-    alpha = [0.1*x for x in range(6,12)]
-    alpha = [1.0]
-    beta = [0.1*x for x in range(5,11)]
-    beta = [0.7]
+    alpha = [0.1*x for x in range(3,8)]
+    #alpha = [0.7]
+    beta = [0.1*x for x in range(2,6)]
+    #beta = [0.3]
     gamma = [0.2*x for x in range(1,5)]
-    gamma = [0.5]
+    #gamma = [0.2]
     for BC in BoxCox:
         for b in bias:
             for A in alpha:
