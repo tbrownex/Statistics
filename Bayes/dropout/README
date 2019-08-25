@@ -1,0 +1,4 @@
+Probabilistic Backpropagation for Scalable Learning of Bayesian Neural Networks
+
+The theory is here: https://arxiv.org/pdf/1502.05336.pdf
+code is here: https://github.com/yaringal/DropoutUncertaintyExps/blob/master/net/net.py
